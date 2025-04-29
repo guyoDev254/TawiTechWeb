@@ -1,20 +1,12 @@
 "use client"
 
 import type React from "react"
-
+import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { Code, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react"
 
 export function Footer() {
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Implement newsletter signup functionality
-    console.log("Newsletter signup")
-  }
-
   return (
     <footer className="w-full border-t bg-gray-50 dark:bg-gray-900 justify-center items-center ml-5">
       <div className="container py-12 md:py-16">
@@ -23,7 +15,13 @@ export function Footer() {
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center space-x-2 mb-4">
               <motion.div whileHover={{ rotate: 360 }} transition={{ duration: 0.5 }}>
-                <img src={'/images/logo/3.png'} className="h-10 w-10 text-primary" />
+                <Image 
+                  src="/images/logo/3.png" 
+                  alt="TawiTech Africa Logo" 
+                  width={40} 
+                  height={40} 
+                  className="h-10 w-10 text-primary"
+                />
               </motion.div>
               <span className="font-bold text-xl">TawiTech Africa</span>
             </Link>
@@ -35,16 +33,16 @@ export function Footer() {
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-primary" />
                 <span className="text-gray-500 dark:text-gray-400">
-                  123 Tech Street, Suite 456, San Francisco, CA 94107
+                  Hurlingham Park, Argwings Kodhek Road, Nairobi Kenya
                 </span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-primary" />
-                <span className="text-gray-500 dark:text-gray-400">(123) 456-7890</span>
+                <span className="text-gray-500 dark:text-gray-400">(+254) 745-134-792 / (+254) 745-134-652</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-primary" />
-                <span className="text-gray-500 dark:text-gray-400">info@techsolutions.com</span>
+                <span className="text-gray-500 dark:text-gray-400">info@tawitech.io</span>
               </div>
             </div>
           </div>

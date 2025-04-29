@@ -5,10 +5,10 @@ import { Button } from "@/components/ui/button"
 import { FadeIn } from "@/components/animations/fade-in"
 import { StaggerChildren } from "@/components/animations/stagger-children"
 import { Reveal } from "@/components/animations/reveal"
-import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { FAQSection } from "@/components/sections/faq-section"
 import { PartnersSection } from "@/components/sections/partners-section"
+import Image from "next/image"
 
 export default function Home() {
   // Sample FAQ data
@@ -84,7 +84,7 @@ export default function Home() {
                 </FadeIn>
               </FadeIn>
               <FadeIn direction="left" delay={0.3} className="flex items-center justify-center">
-                <img
+                <Image
                   alt="Hero Image"
                   className="rounded-xl object-cover"
                   src="/images/hero1.jpg"
@@ -203,7 +203,7 @@ export default function Home() {
                     Your Trusted Technology Partner
                   </h2>
                   <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                    With over a decade of experience, we've helped businesses of all sizes transform their operations
+                    With over a decade of experience, we&apos;ve helped businesses of all sizes transform their operations
                     through innovative software solutions.
                   </p>
                 </div>
@@ -234,7 +234,7 @@ export default function Home() {
                 </FadeIn>
               </FadeIn>
               <FadeIn direction="left" delay={0.3} className="flex items-center justify-center">
-                <img
+                <Image
                   alt="Team Image"
                   className="rounded-xl object-cover"
                   src="/images/hero2.jpg"
@@ -255,13 +255,14 @@ export default function Home() {
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Our Success Stories</h2>
                 <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                  See how we've helped businesses like yours achieve their goals.
+                  See how we&apos;ve helped businesses like yours achieve their goals.
                 </p>
               </div>
             </FadeIn>
             <StaggerChildren className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
               <div className="flex flex-col rounded-lg border overflow-hidden">
-                <img
+                <Image
+                  fill
                   src="/placeholder.svg?height=200&width=400"
                   alt="Case Study 1"
                   className="object-cover w-full h-48"
@@ -277,7 +278,8 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex flex-col rounded-lg border overflow-hidden">
-                <img
+                <Image
+                  fill
                   src="/placeholder.svg?height=200&width=400"
                   alt="Case Study 2"
                   className="object-cover w-full h-48"
@@ -293,7 +295,8 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex flex-col rounded-lg border overflow-hidden">
-                <img
+                <Image
+                  fill
                   src="/placeholder.svg?height=200&width=400"
                   alt="Case Study 3"
                   className="object-cover w-full h-48"
@@ -326,7 +329,7 @@ export default function Home() {
                 Ready to transform your business?
               </h2>
               <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                Let's discuss how our software solutions can help you achieve your goals.
+                Let&apos;s discuss how our software solutions can help you achieve your goals.
               </p>
             </FadeIn>
             <FadeIn direction="left" delay={0.2} className="flex gap-4 lg:justify-end">

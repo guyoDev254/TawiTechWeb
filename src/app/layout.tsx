@@ -10,7 +10,10 @@ export const metadata = {
   description: "Custom software development and IT consulting services for businesses of all sizes.",
 }
 
-export default function RootLayout({ children }: any) {
+import { ReactNode } from "react";
+import { Footer } from "@/components/footer"
+
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -18,6 +21,7 @@ export default function RootLayout({ children }: any) {
         {/* <ThemeProvider attribute="class" defaultTheme="light" enableSystem> */}
         <Header />
           <PageTransition>{children}</PageTransition>
+        <Footer />
         {/* </ThemeProvider> */}
         </div>
       </body>

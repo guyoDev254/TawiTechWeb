@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Code, Calendar, User, Tag } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
 export default function BlogPage() {
   return (
@@ -56,7 +57,8 @@ export default function BlogPage() {
           <div className="container px-4 md:px-6">
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               <div className="flex flex-col rounded-lg border overflow-hidden bg-background">
-                <img
+                <Image
+                  fill
                   src="/placeholder.svg?height=200&width=400"
                   alt="Blog Post 1"
                   className="object-cover w-full h-48"
@@ -86,7 +88,8 @@ export default function BlogPage() {
                 </div>
               </div>
               <div className="flex flex-col rounded-lg border overflow-hidden bg-background">
-                <img
+                <Image
+                  fill
                   src="/placeholder.svg?height=200&width=400"
                   alt="Blog Post 2"
                   className="object-cover w-full h-48"
@@ -116,7 +119,8 @@ export default function BlogPage() {
                 </div>
               </div>
               <div className="flex flex-col rounded-lg border overflow-hidden bg-background">
-                <img
+                <Image
+                  fill
                   src="/placeholder.svg?height=200&width=400"
                   alt="Blog Post 3"
                   className="object-cover w-full h-48"
@@ -146,7 +150,8 @@ export default function BlogPage() {
                 </div>
               </div>
               <div className="flex flex-col rounded-lg border overflow-hidden bg-background">
-                <img
+                <Image
+                  fill
                   src="/placeholder.svg?height=200&width=400"
                   alt="Blog Post 4"
                   className="object-cover w-full h-48"
@@ -174,7 +179,8 @@ export default function BlogPage() {
                 </div>
               </div>
               <div className="flex flex-col rounded-lg border overflow-hidden bg-background">
-                <img
+                <Image
+                  fill
                   src="/placeholder.svg?height=200&width=400"
                   alt="Blog Post 5"
                   className="object-cover w-full h-48"
@@ -203,7 +209,8 @@ export default function BlogPage() {
                 </div>
               </div>
               <div className="flex flex-col rounded-lg border overflow-hidden bg-background">
-                <img
+                <Image
+                  fill
                   src="/placeholder.svg?height=200&width=400"
                   alt="Blog Post 6"
                   className="object-cover w-full h-48"
@@ -264,7 +271,7 @@ export default function BlogPage() {
                 </p>
               </div>
               <div className="flex items-center justify-center">
-                <img
+                <Image
                   alt="Newsletter"
                   className="rounded-xl object-cover"
                   src="/placeholder.svg?height=300&width=400"
@@ -276,68 +283,6 @@ export default function BlogPage() {
           </div>
         </section>
       </main>
-      <footer className="w-full border-t py-6 md:py-0">
-        <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
-          <p className="text-center text-sm leading-loose text-gray-500 md:text-left">
-            © 2023 TechSolutions. All rights reserved.
-          </p>
-          <div className="flex items-center gap-4">
-            <Link href="#" className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50">
-              <svg
-                className="h-5 w-5"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-              </svg>
-              <span className="sr-only">Facebook</span>
-            </Link>
-            <Link href="#" className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50">
-              <svg
-                className="h-5 w-5"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
-              </svg>
-              <span className="sr-only">Twitter</span>
-            </Link>
-            <Link href="#" className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50">
-              <svg
-                className="h-5 w-5"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                <rect x="2" y="9" width="4" height="12" />
-                <circle cx="4" cy="4" r="2" />
-              </svg>
-              <span className="sr-only">LinkedIn</span>
-            </Link>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }

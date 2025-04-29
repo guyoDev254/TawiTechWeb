@@ -1,18 +1,14 @@
 "use client"
 
 import type React from "react"
-
+import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Code, Menu, X, ChevronDown, Search, Moon, Sun, Globe } from "lucide-react"
+import { ChevronDown } from "lucide-react"
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { useTheme } from "next-themes"
-
-import { Button } from "@/components/ui/button"
 import { FadeIn } from "@/components/animations/fade-in"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { Input } from "@/components/ui/input"
 
 interface NavItem {
   href: string
@@ -22,34 +18,15 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   { href: "/", label: "Home"},
-  { href: "/services", label: "Services"},
   { href: "/about", label: "About Us" },
+  { href: "/services", label: "Services"},
   { href: "/contact", label: "Contact" },
 ]
 
 export function Header() {
   const pathname = usePathname()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [searchOpen, setSearchOpen] = useState(false)
-  const [searchQuery, setSearchQuery] = useState("")
   const [scrolled, setScrolled] = useState(false)
-  const { theme, setTheme } = useTheme()
-
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen)
-  }
-
-  const toggleSearch = () => {
-    setSearchOpen(!searchOpen)
-  }
-
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Implement search functionality here
-    console.log("Searching for:", searchQuery)
-    setSearchOpen(false)
-    setSearchQuery("")
-  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -74,7 +51,13 @@ export function Header() {
         <div className="mr-4 flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <motion.div whileHover={{ rotate: 360 }} transition={{ duration: 0.5 }}>
-              <img src='/images/logo/2.png' className="h-10 w-40 text-primary" />
+              <Image 
+                src="/images/logo/2.png" 
+                alt="TawiTech Africa Logo" 
+                width={160} 
+                height={40} 
+                className="h-10 w-40 text-primary"
+              />
             </motion.div>
           </Link>
           <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
@@ -119,8 +102,6 @@ export function Header() {
             className="md:hidden border-t"
           >
             <div className="container py-4">
-              
-
               <nav className="flex flex-col space-y-4">
                 {navItems.map((item, index) => (
                   <div key={item.href}>
@@ -161,8 +142,6 @@ export function Header() {
                   </div>
                 ))}
               </nav>
-
-              
             </div>
           </motion.div>
         )}

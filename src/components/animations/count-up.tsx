@@ -18,7 +18,6 @@ export function CountUp({
   from,
   to,
   duration = 2,
-  delay = 0,
   className = "",
   once = true,
   threshold = 0.1,
