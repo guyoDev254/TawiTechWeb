@@ -5,9 +5,7 @@ import { Button } from "@/components/ui/button"
 import { FadeIn } from "@/components/animations/fade-in"
 import { StaggerChildren } from "@/components/animations/stagger-children"
 import { Reveal } from "@/components/animations/reveal"
-import { Footer } from "@/components/footer"
 import { FAQSection } from "@/components/sections/faq-section"
-import { PartnersSection } from "@/components/sections/partners-section"
 import Image from "next/image"
 
 export default function Home() {
@@ -40,15 +38,6 @@ export default function Home() {
     },
   ]
 
-  // Sample partners data
-  const partners = [
-    { name: "Microsoft", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "Amazon", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "Google", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "IBM", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "Oracle", logo: "/placeholder.svg?height=60&width=120" },
-    { name: "Salesforce", logo: "/placeholder.svg?height=60&width=120" },
-  ]
 
   return (
     <div className="flex flex-col min-h-screen justify-center items-center">

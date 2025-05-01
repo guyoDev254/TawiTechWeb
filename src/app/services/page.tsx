@@ -2,7 +2,6 @@ import Link from "next/link"
 import { ArrowRight, Database, Globe, LayoutGrid, MessageSquare, Shield, Smartphone, Cpu, Cloud } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
-import { Footer } from "@/components/footer"
 import { FadeIn } from "@/components/animations/fade-in"
 import { StaggerChildren } from "@/components/animations/stagger-children"
 
