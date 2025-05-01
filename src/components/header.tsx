@@ -50,7 +50,7 @@ export function Header() {
       <div className="container flex h-16 items-center justify-center">
         <div className="mr-4 flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <motion.div whileHover={{ rotate: 360 }} transition={{ duration: 0.5 }}>
+            <div >
               <Image 
                 src="/images/logo/2.png" 
                 alt="TawiTech Africa Logo" 
@@ -58,7 +58,7 @@ export function Header() {
                 height={40} 
                 className="h-10 w-40 text-primary"
               />
-            </motion.div>
+            </div>
           </Link>
           <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
             {navItems.map((item) =>
@@ -148,7 +148,7 @@ export function Header() {
       </AnimatePresence>
 
       {/* Announcement Banner */}
-      <div className="bg-primary text-primary-foreground py-2 text-center text-sm">
+      {/* <div className="bg-primary text-primary-foreground py-2 text-center text-sm">
         <div className="container">
           <p>
             🚀 New service launch: AI-powered business analytics.{" "}
@@ -157,7 +157,7 @@ export function Header() {
             </Link>
           </p>
         </div>
-      </div>
+      </div> */}
     </header>
   )
 }

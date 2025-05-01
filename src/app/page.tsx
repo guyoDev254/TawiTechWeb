@@ -96,7 +96,7 @@ export default function Home() {
           </div>
         </section>
 
-        <PartnersSection partners={partners} />
+        {/* <PartnersSection partners={partners} /> */}
 
         <section id="services" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 dark:bg-gray-900">
           <div className="container px-4 md:px-6">
@@ -343,7 +343,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   )
 }

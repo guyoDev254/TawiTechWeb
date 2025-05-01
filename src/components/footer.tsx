@@ -43,6 +43,7 @@ export function Footer() {
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-primary" />
                 <span className="text-gray-500 dark:text-gray-400">info@tawitech.io</span>
+                <span className="text-gray-500 dark:text-gray-400">support@tawitech.io</span>
               </div>
             </div>
           </div>
