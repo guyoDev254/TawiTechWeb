@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react"
@@ -15,7 +14,7 @@ export function Footer() {
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center space-x-2 mb-4">
               <motion.div whileHover={{ rotate: 360 }} transition={{ duration: 0.5 }}>
-                <Image 
+                <img 
                   src="/images/logo/3.png" 
                   alt="TawiTech Africa Logo" 
                   width={40} 

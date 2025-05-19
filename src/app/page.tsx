@@ -6,7 +6,6 @@ import { FadeIn } from "@/components/animations/fade-in"
 import { StaggerChildren } from "@/components/animations/stagger-children"
 import { Reveal } from "@/components/animations/reveal"
 import { FAQSection } from "@/components/sections/faq-section"
-import Image from "next/image"
 
 export default function Home() {
   // Sample FAQ data
@@ -73,12 +72,10 @@ export default function Home() {
                 </FadeIn>
               </FadeIn>
               <FadeIn direction="left" delay={0.3} className="flex items-center justify-center">
-                <Image
+                <img
                   alt="Hero Image"
                   className="rounded-xl object-cover"
                   src="/images/hero1.jpg"
-                  width={550}
-                  height={550}
                 />
               </FadeIn>
             </div>
@@ -223,12 +220,10 @@ export default function Home() {
                 </FadeIn>
               </FadeIn>
               <FadeIn direction="left" delay={0.3} className="flex items-center justify-center">
-                <Image
+                <img
                   alt="Team Image"
                   className="rounded-xl object-cover"
                   src="/images/hero2.jpg"
-                  width={600}
-                  height={400}
                 />
               </FadeIn>
             </div>
@@ -250,8 +245,8 @@ export default function Home() {
             </FadeIn>
             <StaggerChildren className="mx-auto grid max-w-5xl grid-cols-1 gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
               <div className="flex flex-col rounded-lg border overflow-hidden">
-                <Image
-                  fill
+                <img
+                  
                   src="/placeholder.svg?height=200&width=400"
                   alt="Case Study 1"
                   className="object-cover w-full h-48"
@@ -267,8 +262,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex flex-col rounded-lg border overflow-hidden">
-                <Image
-                  fill
+                <img
                   src="/placeholder.svg?height=200&width=400"
                   alt="Case Study 2"
                   className="object-cover w-full h-48"
@@ -284,8 +278,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex flex-col rounded-lg border overflow-hidden">
-                <Image
-                  fill
+                <img
                   src="/placeholder.svg?height=200&width=400"
                   alt="Case Study 3"
                   className="object-cover w-full h-48"

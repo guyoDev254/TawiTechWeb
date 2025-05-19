@@ -2,7 +2,7 @@ import Link from "next/link"
 import { Code, Calendar, User, Tag } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
-import Image from "next/image"
+// import Image from "next/image"
 
 export default function BlogPage() {
   return (
@@ -57,8 +57,8 @@ export default function BlogPage() {
           <div className="container px-4 md:px-6">
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               <div className="flex flex-col rounded-lg border overflow-hidden bg-background">
-                <Image
-                  fill
+                <img
+                  
                   src="/placeholder.svg?height=200&width=400"
                   alt="Blog Post 1"
                   className="object-cover w-full h-48"
@@ -88,8 +88,7 @@ export default function BlogPage() {
                 </div>
               </div>
               <div className="flex flex-col rounded-lg border overflow-hidden bg-background">
-                <Image
-                  fill
+                <img
                   src="/placeholder.svg?height=200&width=400"
                   alt="Blog Post 2"
                   className="object-cover w-full h-48"
@@ -119,8 +118,7 @@ export default function BlogPage() {
                 </div>
               </div>
               <div className="flex flex-col rounded-lg border overflow-hidden bg-background">
-                <Image
-                  fill
+                <img
                   src="/placeholder.svg?height=200&width=400"
                   alt="Blog Post 3"
                   className="object-cover w-full h-48"
@@ -150,8 +148,7 @@ export default function BlogPage() {
                 </div>
               </div>
               <div className="flex flex-col rounded-lg border overflow-hidden bg-background">
-                <Image
-                  fill
+                <img
                   src="/placeholder.svg?height=200&width=400"
                   alt="Blog Post 4"
                   className="object-cover w-full h-48"
@@ -179,8 +176,7 @@ export default function BlogPage() {
                 </div>
               </div>
               <div className="flex flex-col rounded-lg border overflow-hidden bg-background">
-                <Image
-                  fill
+                <img
                   src="/placeholder.svg?height=200&width=400"
                   alt="Blog Post 5"
                   className="object-cover w-full h-48"
@@ -209,8 +205,7 @@ export default function BlogPage() {
                 </div>
               </div>
               <div className="flex flex-col rounded-lg border overflow-hidden bg-background">
-                <Image
-                  fill
+                <img
                   src="/placeholder.svg?height=200&width=400"
                   alt="Blog Post 6"
                   className="object-cover w-full h-48"
@@ -271,7 +266,7 @@ export default function BlogPage() {
                 </p>
               </div>
               <div className="flex items-center justify-center">
-                <Image
+                <img
                   alt="Newsletter"
                   className="rounded-xl object-cover"
                   src="/placeholder.svg?height=300&width=400"

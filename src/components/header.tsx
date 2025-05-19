@@ -1,14 +1,18 @@
 "use client"
 
-import type React from "react"
-import Image from "next/image"
+import React, { useEffect, useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { ChevronDown } from "lucide-react"
-import { useState, useEffect } from "react"
+import { ChevronDown, Menu, X } from "lucide-react"
+import { FaGoogle } from "react-icons/fa"
 import { motion, AnimatePresence } from "framer-motion"
 import { FadeIn } from "@/components/animations/fade-in"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 interface NavItem {
   href: string
@@ -17,9 +21,16 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { href: "/", label: "Home"},
+  { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
-  { href: "/services", label: "Services"},
+  {
+    href: "/services",
+    label: "Services",
+    children: [
+      { href: "/services/web", label: "Web Development" },
+      { href: "/services/mobile", label: "Mobile Apps" },
+    ],
+  },
   { href: "/contact", label: "Contact" },
 ]
 
@@ -30,64 +41,81 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setScrolled(true)
-      } else {
-        setScrolled(false)
-      }
+      setScrolled(window.scrollY > 10)
     }
 
     window.addEventListener("scroll", handleScroll)
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
+    return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 transition-all duration-200 ${scrolled ? "shadow-md" : ""}`}
+      className={`sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 transition-all duration-200 ${
+        scrolled ? "shadow-md" : ""
+      }`}
     >
-      <div className="container flex h-16 items-center justify-center">
-        <div className="mr-4 flex">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
-            <div >
-              <Image 
-                src="/images/logo/2.png" 
-                alt="TawiTech Africa Logo" 
-                width={160} 
-                height={40} 
-                className="h-10 w-40 text-primary"
-              />
-            </div>
-          </Link>
-          <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
-            {navItems.map((item) =>
-              item.children ? (
-                <DropdownMenu key={item.href}>
-                  <DropdownMenuTrigger
-                    className={`flex items-center transition-colors hover:text-foreground/80 ${pathname.startsWith(item.href) ? "text-primary" : ""}`}
-                  >
-                    {item.label} <ChevronDown className="ml-1 h-4 w-4" />
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="start">
-                    {item.children.map((child) => (
-                      <DropdownMenuItem key={child.href} asChild>
-                        <Link href={child.href}>{child.label}</Link>
-                      </DropdownMenuItem>
-                    ))}
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              ) : (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={`transition-colors hover:text-foreground/80 ${pathname === item.href ? "text-primary" : ""}`}
+      <div className="container flex h-16 items-center justify-between">
+        {/* Logo */}
+        <Link href="/" className="flex items-center space-x-2">
+          <img
+            src="/images/logo/2.png"
+            alt="TawiTech Africa Logo"
+            width={160}
+            height={40}
+            className="h-10 w-40"
+          />
+        </Link>
+
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+          {navItems.map((item) =>
+            item.children ? (
+              <DropdownMenu key={item.href}>
+                <DropdownMenuTrigger
+                  className={`flex items-center hover:text-foreground/80 transition-colors ${
+                    pathname.startsWith(item.href) ? "text-primary" : ""
+                  }`}
                 >
                   {item.label}
-                </Link>
-              ),
-            )}
-          </nav>
+                  <ChevronDown className="ml-1 h-4 w-4" />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start">
+                  {item.children.map((child) => (
+                    <DropdownMenuItem key={child.href} asChild>
+                      <Link href={child.href}>{child.label}</Link>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+            ) : (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`transition-colors hover:text-foreground/80 ${
+                  pathname === item.href ? "text-primary" : ""
+                }`}
+              >
+                {item.label}
+              </Link>
+            )
+          )}
+        </nav>
+
+        {/* Right: Google Login + Mobile Menu Button */}
+        <div className="flex items-center space-x-4 md:space-x-6">
+          <Link
+            href="/auth/google"
+            className="text-muted-foreground hover:text-primary transition-colors"
+          >
+            <FaGoogle className="h-5 w-5" />
+          </Link>
+
+          <button
+            className="md:hidden inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-ring"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
         </div>
       </div>
 
@@ -107,18 +135,22 @@ export function Header() {
                   <div key={item.href}>
                     {item.children ? (
                       <div className="space-y-2">
-                        <div className={`font-medium ${pathname.startsWith(item.href) ? "text-primary" : ""}`}>
+                        <div className="font-medium text-foreground">
                           {item.label}
                         </div>
                         <div className="pl-4 space-y-2 border-l-2 border-gray-200 dark:border-gray-700">
                           {item.children.map((child) => (
-                            <FadeIn key={child.href} delay={index * 0.05 + 0.1} direction="right">
+                            <FadeIn
+                              key={child.href}
+                              delay={index * 0.05 + 0.1}
+                              direction="right"
+                            >
                               <Link
                                 href={child.href}
+                                onClick={() => setMobileMenuOpen(false)}
                                 className={`block py-1 transition-colors hover:text-foreground/80 ${
                                   pathname === child.href ? "text-primary" : ""
                                 }`}
-                                onClick={() => setMobileMenuOpen(false)}
                               >
                                 {child.label}
                               </Link>
@@ -130,10 +162,10 @@ export function Header() {
                       <FadeIn key={item.href} delay={index * 0.05} direction="right">
                         <Link
                           href={item.href}
+                          onClick={() => setMobileMenuOpen(false)}
                           className={`block py-2 transition-colors hover:text-foreground/80 ${
                             pathname === item.href ? "text-primary font-medium" : ""
                           }`}
-                          onClick={() => setMobileMenuOpen(false)}
                         >
                           {item.label}
                         </Link>
@@ -146,18 +178,6 @@ export function Header() {
           </motion.div>
         )}
       </AnimatePresence>
-
-      {/* Announcement Banner */}
-      {/* <div className="bg-primary text-primary-foreground py-2 text-center text-sm">
-        <div className="container">
-          <p>
-            🚀 New service launch: AI-powered business analytics.{" "}
-            <Link href="/services/ai-analytics" className="underline font-medium">
-              Learn more
-            </Link>
-          </p>
-        </div>
-      </div> */}
     </header>
   )
 }

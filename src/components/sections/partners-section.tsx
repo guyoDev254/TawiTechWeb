@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { FadeIn } from "@/components/animations/fade-in"
-import Image from "next/image"
+// import Image from "next/image"
 
 interface Partner {
   name: string
@@ -41,7 +41,7 @@ export function PartnersSection({
               transition={{ delay: index * 0.1 }}
               whileHover={{ scale: 1.05 }}
             >
-              <Image
+              <img
                 src={partner.logo || "/placeholder.svg"}
                 alt={partner.name}
                 width={120}
