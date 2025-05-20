@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/animations/fade-in";
 import { StaggerChildren } from "@/components/animations/stagger-children";
 import { Reveal } from "@/components/animations/reveal";
+import ProjectProcessAlt from "@/components/Projects/ProjectProcess";
 
 export default function AboutPage() {
   return (
@@ -46,7 +47,7 @@ export default function AboutPage() {
                 <img
                   alt="Team Image"
                   className="rounded-xl object-cover"
-                  src="/images/about.jpg"
+                  src="/images/about.jpeg"
                   width={600}
                   height={400}
                 />
@@ -127,53 +128,9 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 dark:bg-gray-900">
-          <div className="container px-4 md:px-6">
-            <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
-              <FadeIn direction="right" className="flex items-center justify-center">
-                <img
-                  alt="Office Image"
-                  className="rounded-xl object-cover"
-                  src="/images/hero2.jpg"
-                  width={600}
-                  height={400}
-                />
-              </FadeIn>
-              <FadeIn direction="left" delay={0.3} className="flex flex-col justify-center space-y-4">
-                <div className="space-y-2">
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Our Approach</h2>
-                  <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                    We believe in a collaborative, transparent approach to software development.
-                  </p>
-                </div>
-                <StaggerChildren className="space-y-2" staggerDelay={0.1} delay={0.2}>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="h-5 w-5 text-primary" />
-                    <p className="text-gray-500 dark:text-gray-400">
-                      Agile methodology for flexible, iterative development
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="h-5 w-5 text-primary" />
-                    <p className="text-gray-500 dark:text-gray-400">Regular communication and progress updates</p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="h-5 w-5 text-primary" />
-                    <p className="text-gray-500 dark:text-gray-400">Thorough testing and quality assurance</p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="h-5 w-5 text-primary" />
-                    <p className="text-gray-500 dark:text-gray-400">Post-launch support and maintenance</p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="h-5 w-5 text-primary" />
-                    <p className="text-gray-500 dark:text-gray-400">Knowledge transfer and documentation</p>
-                  </div>
-                </StaggerChildren>
-              </FadeIn>
-            </div>
-          </div>
-        </section>
+        {/* <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 dark:bg-gray-900"> */}
+          <ProjectProcessAlt />
+        {/* </section> */}
 
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">

@@ -17,13 +17,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="flex-1 justify-center items-center">
+        {/* <div className="flex-1 justify-center items-center"> */}
         {/* <ThemeProvider attribute="class" defaultTheme="light" enableSystem> */}
         <Header />
           <PageTransition>{children}</PageTransition>
         <Footer />
         {/* </ThemeProvider> */}
-        </div>
+        {/* </div> */}
       </body>
     </html>
   )

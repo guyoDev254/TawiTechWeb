@@ -42,7 +42,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen items-center">
       
       <main className="flex-1">
-        <section className="w-full py-2 md:py-24 lg:py-32 xl:py-4">
+        <section className="w-full py-8 md:py-24 lg:py-32 xl:py-8">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:grid-cols-2">
               <FadeIn direction="right" className="flex flex-col justify-center space-y-4">
@@ -69,7 +69,7 @@ export default function Home() {
                 <img
                   alt="Hero Image"
                   className="rounded-xl object-cover h-88 w-full md:h-96 lg:h-[500px] xl:h-[600px]"
-                  src="/images/hero3.png"
+                  src="/images/Africa.jpg"
                 />
               </FadeIn>
             </div>

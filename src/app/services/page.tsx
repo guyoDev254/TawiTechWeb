@@ -4,6 +4,7 @@ import { ArrowRight, Database, Globe, LayoutGrid, MessageSquare, Shield, Smartph
 import { Button } from "@/components/ui/button"
 import { FadeIn } from "@/components/animations/fade-in"
 import { StaggerChildren } from "@/components/animations/stagger-children"
+import ProjectProcessAlt from "@/components/Projects/ProjectProcess"
 
 export default function ServicesPage() {
   return (
@@ -157,58 +158,10 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <FadeIn className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Our Process</h2>
-                <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                  We follow a proven methodology to ensure the success of your project.
-                </p>
-              </div>
-            </FadeIn>
-            <StaggerChildren className="mx-auto grid max-w-5xl grid-cols-1 gap-8 py-12 md:grid-cols-4">
-              <div className="flex flex-col items-center space-y-2 text-center">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-xl font-bold text-primary-foreground">
-                  1
-                </div>
-                <h3 className="text-xl font-bold">Discovery</h3>
-                <p className="text-gray-500 dark:text-gray-400">
-                  We work closely with you to understand your business goals and requirements.
-                </p>
-              </div>
-              <div className="flex flex-col items-center space-y-2 text-center">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-xl font-bold text-primary-foreground">
-                  2
-                </div>
-                <h3 className="text-xl font-bold">Planning</h3>
-                <p className="text-gray-500 dark:text-gray-400">
-                  We create a detailed project plan with timelines, milestones, and deliverables.
-                </p>
-              </div>
-              <div className="flex flex-col items-center space-y-2 text-center">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-xl font-bold text-primary-foreground">
-                  3
-                </div>
-                <h3 className="text-xl font-bold">Development</h3>
-                <p className="text-gray-500 dark:text-gray-400">
-                  Our expert team builds your solution using the latest technologies and best practices.
-                </p>
-              </div>
-              <div className="flex flex-col items-center space-y-2 text-center">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-xl font-bold text-primary-foreground">
-                  4
-                </div>
-                <h3 className="text-xl font-bold">Delivery & Support</h3>
-                <p className="text-gray-500 dark:text-gray-400">
-                  We deploy your solution and provide ongoing support and maintenance.
-                </p>
-              </div>
-            </StaggerChildren>
-          </div>
-        </section>
+       
+          <ProjectProcessAlt />
 
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 dark:bg-gray-900">
+        <section className="w-full py-2 md:py-24 lg:py-32 bg-gray-50 dark:bg-gray-900">
           <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
             <FadeIn direction="right" className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Ready to discuss your project?</h2>
