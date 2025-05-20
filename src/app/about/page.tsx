@@ -43,13 +43,12 @@ export default function AboutPage() {
                 </FadeIn>
               </FadeIn>
               <FadeIn direction="left" delay={0.3} className="flex items-center justify-center">
-                <Image
+                <img
                   alt="Team Image"
                   className="rounded-xl object-cover"
-                  src="/placeholder.svg"
+                  src="/images/about.jpg"
                   width={600}
                   height={400}
-                  priority
                 />
               </FadeIn>
             </div>
@@ -132,13 +131,12 @@ export default function AboutPage() {
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
               <FadeIn direction="right" className="flex items-center justify-center">
-                <Image
+                <img
                   alt="Office Image"
                   className="rounded-xl object-cover"
-                  src="/placeholder.svg"
+                  src="/images/hero2.jpg"
                   width={600}
                   height={400}
-                  priority
                 />
               </FadeIn>
               <FadeIn direction="left" delay={0.3} className="flex flex-col justify-center space-y-4">

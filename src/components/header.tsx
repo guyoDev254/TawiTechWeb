@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { ChevronDown, Menu, X } from "lucide-react"
-import { FaGoogle } from "react-icons/fa"
 import { motion, AnimatePresence } from "framer-motion"
 import { FadeIn } from "@/components/animations/fade-in"
 import {
@@ -26,10 +25,6 @@ const navItems: NavItem[] = [
   {
     href: "/services",
     label: "Services",
-    children: [
-      { href: "/services/web", label: "Web Development" },
-      { href: "/services/mobile", label: "Mobile Apps" },
-    ],
   },
   { href: "/contact", label: "Contact" },
 ]
@@ -103,13 +98,6 @@ export function Header() {
 
         {/* Right: Google Login + Mobile Menu Button */}
         <div className="flex items-center space-x-4 md:space-x-6">
-          <Link
-            href="/auth/google"
-            className="text-muted-foreground hover:text-primary transition-colors"
-          >
-            <FaGoogle className="h-5 w-5" />
-          </Link>
-
           <button
             className="md:hidden inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-ring"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

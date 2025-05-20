@@ -247,7 +247,7 @@ export default function Home() {
               <div className="flex flex-col rounded-lg border overflow-hidden">
                 <img
                   
-                  src="/placeholder.svg?height=200&width=400"
+                  src="/images/ecommerce.jpg"
                   alt="Case Study 1"
                   className="object-cover w-full h-48"
                 />
@@ -256,14 +256,12 @@ export default function Home() {
                   <p className="mt-2 text-gray-500 dark:text-gray-400">
                     How we helped an online retailer increase conversions by 45% with a modern, user-friendly platform.
                   </p>
-                  <Link href="/case-studies/ecommerce-redesign" className="mt-4 text-primary hover:underline">
-                    Read Case Study
-                  </Link>
+                  
                 </div>
               </div>
               <div className="flex flex-col rounded-lg border overflow-hidden">
                 <img
-                  src="/placeholder.svg?height=200&width=400"
+                  src="/images/healthcare.jpg"
                   alt="Case Study 2"
                   className="object-cover w-full h-48"
                 />
@@ -272,14 +270,11 @@ export default function Home() {
                   <p className="mt-2 text-gray-500 dark:text-gray-400">
                     Developing a secure, HIPAA-compliant system that streamlined patient care for a major hospital.
                   </p>
-                  <Link href="/case-studies/healthcare-system" className="mt-4 text-primary hover:underline">
-                    Read Case Study
-                  </Link>
                 </div>
               </div>
               <div className="flex flex-col rounded-lg border overflow-hidden">
                 <img
-                  src="/placeholder.svg?height=200&width=400"
+                  src="/images/finance.jpg"
                   alt="Case Study 3"
                   className="object-cover w-full h-48"
                 />
@@ -288,17 +283,9 @@ export default function Home() {
                   <p className="mt-2 text-gray-500 dark:text-gray-400">
                     Creating a secure, high-performance API that processes over 1 million transactions daily.
                   </p>
-                  <Link href="/case-studies/financial-api" className="mt-4 text-primary hover:underline">
-                    Read Case Study
-                  </Link>
                 </div>
               </div>
             </StaggerChildren>
-            <FadeIn className="mt-12 flex justify-center">
-              <Button asChild size="lg">
-                <Link href="/case-studies">View All Case Studies</Link>
-              </Button>
-            </FadeIn>
           </div>
         </section>
 
