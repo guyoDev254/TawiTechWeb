@@ -7,7 +7,7 @@ import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from "luc
 
 export function Footer() {
   return (
-    <footer className="w-full border-t bg-gray-50 dark:bg-gray-900 justify-center items-center ml-5">
+    <footer className="w-full  bg-white dark:bg-gray-900 justify-center items-center ml-5">
       <div className="container py-12 md:py-16">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-5">
           {/* Company Info */}
@@ -158,7 +158,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+        <div className="mt-12 pt-8 ">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-center text-sm text-gray-500 dark:text-gray-400 mb-4 md:mb-0">
               © {"2025"} TawiTech Africa LTD. All rights reserved.
@@ -166,17 +166,11 @@ export function Footer() {
             <div className="flex items-center space-x-4">
               <Link href="#" className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50">
                 <motion.div whileHover={{ scale: 1.2 }}>
-                  <Facebook className="h-5 w-5" />
-                  <span className="sr-only">Facebook</span>
-                </motion.div>
-              </Link>
-              <Link href="#" className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50">
-                <motion.div whileHover={{ scale: 1.2 }}>
                   <Twitter className="h-5 w-5" />
                   <span className="sr-only">Twitter</span>
                 </motion.div>
               </Link>
-              <Link href="#" className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50">
+              <Link href="https://www.linkedin.com/company/tawitech-africa/" className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50">
                 <motion.div whileHover={{ scale: 1.2 }}>
                   <Linkedin className="h-5 w-5" />
                   <span className="sr-only">LinkedIn</span>
@@ -189,17 +183,6 @@ export function Footer() {
                 </motion.div>
               </Link>
             </div>
-          </div>
-          <div className="mt-4 flex flex-wrap justify-center md:justify-start gap-4 text-sm text-gray-500 dark:text-gray-400">
-            <Link href="/privacy-policy" className="hover:underline">
-              Privacy Policy
-            </Link>
-            <Link href="/terms-of-service" className="hover:underline">
-              Terms of Service
-            </Link>
-            <Link href="/cookie-policy" className="hover:underline">
-              Cookie Policy
-            </Link>
           </div>
         </div>
       </div>

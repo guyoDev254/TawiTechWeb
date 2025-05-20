@@ -39,10 +39,10 @@ export default function Home() {
 
 
   return (
-    <div className="flex flex-col min-h-screen justify-center items-center">
+    <div className="flex flex-col min-h-screen items-center">
       
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
+        <section className="w-full py-2 md:py-24 lg:py-32 xl:py-4">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:grid-cols-2">
               <FadeIn direction="right" className="flex flex-col justify-center space-y-4">
@@ -60,12 +60,6 @@ export default function Home() {
                   </FadeIn>
                 </div>
                 <FadeIn delay={0.4} className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Button size="lg" className="px-8">
-                    <Link href="/contact" className="flex items-center">
-                      Get Started
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
                   <Button size="lg" variant="outline" className="px-8">
                     <Link href="/services">Learn More</Link>
                   </Button>
@@ -74,8 +68,8 @@ export default function Home() {
               <FadeIn direction="left" delay={0.3} className="flex items-center justify-center">
                 <img
                   alt="Hero Image"
-                  className="rounded-xl object-cover"
-                  src="/images/hero1.jpg"
+                  className="rounded-xl object-cover h-88 w-full md:h-96 lg:h-[500px] xl:h-[600px]"
+                  src="/images/hero3.png"
                 />
               </FadeIn>
             </div>
@@ -274,7 +268,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col rounded-lg border overflow-hidden">
                 <img
-                  src="/images/finance.jpg"
+                  src="/images/finance2.png"
                   alt="Case Study 3"
                   className="object-cover w-full h-48"
                 />
@@ -291,7 +285,7 @@ export default function Home() {
 
         <FAQSection faqs={faqs} />
 
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 dark:bg-gray-900">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 dark:bg-gray-900 mb-5">
           <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
             <FadeIn direction="right" className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">

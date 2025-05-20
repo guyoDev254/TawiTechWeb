@@ -51,13 +51,13 @@ export function Header() {
     >
       <div className="container flex h-16 items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center space-x-2">
+        <Link href="/" className="flex items-center space-x-2 ml-5">
           <img
             src="/images/logo/2.png"
             alt="TawiTech Africa Logo"
             width={160}
             height={40}
-            className="h-10 w-40"
+            className="h-10 w-30 ml-40 "
           />
         </Link>
 
